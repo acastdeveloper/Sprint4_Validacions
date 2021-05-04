@@ -63,8 +63,12 @@ function vForm() {
     console.log("Test prov: " + e);
 
     if (a && b && c && d && e) {
-        console.log("Test vàl·lid");
+        console.log("TEST VÀL·LID");
         return true;
+    }
+    else {
+        console.log("NO HA PASSAT LA VAL·LIDACIÓ");
+        return false;
     }
 
 }
