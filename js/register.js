@@ -88,14 +88,13 @@ function vForm() {
     let f = maysPass();
     let g = numPass();
 
-    if (a && b && c && d && e) {
+    if (a && b && c && d && e && f && g) {
         console.log("TEST DE VALIDACIÓ DE NIVELL 1");
         return true;
     } else {
         console.log("NO HA PASSAT LA VALIDACIÓ DE NIVELL 1");
         return false;
     }
-
 
 }
 
