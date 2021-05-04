@@ -26,7 +26,7 @@ function vPass() {
 
     let n = iPass.value.length;
 
-    if (n > 0) {
+    if (n >= 8) { // level2: n>=8 instead n>0
         return true;
     } else {
         iPass.classList.add("is-invalid");
@@ -41,7 +41,7 @@ function vCPass() {
 
     let m = iCPass.value.length;
 
-    if (m > 0) {
+    if (m >= 8) { // level2: m>=8 instead m>0
         return true;
     } else {
         iCPass.classList.add("is-invalid");
@@ -85,6 +85,8 @@ function vForm() {
     console.log("Test EquPass: " + d);
     let e = vProv();
     console.log("Test prov: " + e);
+    let f = maysPass();
+    let g = numPass();
 
     if (a && b && c && d && e) {
         console.log("TEST DE VALIDACIÓ DE NIVELL 1");
@@ -94,4 +96,30 @@ function vForm() {
         return false;
     }
 
+
+}
+
+// LEVEL 2
+function maysPass() {
+    let regex = /[A-Z]/;
+
+    if (regex.test(iPass.value)) {
+        console.log("Conté una majúscula almenys");
+        return true;
+    } else {
+        console.log("NO conté majúscules");
+        return false;
+    }
+}
+
+function numPass() {
+    let regex = /[0-9]/;
+
+    if (regex.test(iPass.value)) {
+        console.log("Conté un número almenys");
+        return true;
+    } else {
+        console.log("NO Conté cap número");
+        return false;
+    }
 }
