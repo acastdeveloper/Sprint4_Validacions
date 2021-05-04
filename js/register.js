@@ -64,6 +64,7 @@ function vForm() {
 
     if (a && b && c && d && e) {
         console.log("Test vàl·lid");
+        return true;
     }
 
 }
